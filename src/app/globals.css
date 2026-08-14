@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-qawwali-indigo: #101827;
+  --color-qawwali-night: #17243A;
+  --color-qawwali-burgundy: #541C25;
+  --color-qawwali-maroon: #35151C;
+  --color-qawwali-gold: #D6A85C;
+  --color-qawwali-cream: #F4DFC0;
+  --color-qawwali-amber: #C98238;
+  --color-qawwali-teal: #315451;
+  --color-qawwali-olive: #252A22;
+
+  --font-devanagari: "Rozha One", "Yatra One", serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+@layer utilities {
+  .font-devanagari {
+    font-family: var(--font-devanagari);
+  }
+  .font-cinzel {
+    font-family: var(--font-cinzel);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+}
+
+.hero-bg {
+  background-image: url("/bg/scene-wide.jpeg");
+}
+
+@media (orientation: portrait) {
+  .hero-bg {
+    background-image: url("/bg/scene-tall.png");
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 9s linear infinite;
+}
+
+/* Custom scrollbar for playlist list */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(37, 21, 28, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(214, 168, 92, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(214, 168, 92, 0.6);
+}
+
+/* Brass button gradient */
+.btn-brass {
+  background: linear-gradient(180deg, #e5bd72 0%, #a96d2f 100%);
+  box-shadow: 0 4px 16px rgba(201, 130, 56, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.btn-brass:hover {
+  background: linear-gradient(180deg, #ebd08d 0%, #b87b38 100%);
+  box-shadow: 0 6px 20px rgba(201, 130, 56, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.btn-brass:active {
+  transform: translateY(1px);
+}
+
+/* Wooden console backdrop */
+.qawwali-console-panel {
+  border: 1px solid rgba(214, 168, 92, 0.28);
+  background: linear-gradient(180deg, rgba(84, 28, 37, 0.82), rgba(20, 24, 35, 0.92));
+  backdrop-filter: blur(24px) saturate(1.4);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.85), inset 0 1px 0 rgba(244, 223, 192, 0.18);
+}

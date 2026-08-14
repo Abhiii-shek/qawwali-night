@@ -1,0 +1,6 @@
+{
+  "name": "Qawwali Night",
+  "description": "A 1990s neighborhood qawwali mehfil experience featuring live vintage console player, authentic playlists, and nostalgic atmosphere.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
